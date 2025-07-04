@@ -165,6 +165,12 @@ static int rte_init(void)
                 orte_show_help_finalize();
                 orte_show_help("help-ess-base.txt", "alps-error", true);
                 return ORTE_ERR_SILENT;
+            } else if (0 == strcmp(envar, "CRANE")) {
+                /* yes to both - so emit a hopefully helpful
+             * error message and abort */
+                orte_show_help_finalize();
+                orte_show_help("help-ess-base.txt", "crane-error", true);
+                return ORTE_ERR_SILENT;
             }
         }
         error = "pmix init";

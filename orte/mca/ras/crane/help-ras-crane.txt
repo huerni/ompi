@@ -1,0 +1,78 @@
+# -*- text -*-
+#
+# Copyright (c) 2004-2007 The Trustees of Indiana University and Indiana
+#                         University Research and Technology
+#                         Corporation.  All rights reserved.
+# Copyright (c) 2004-2005 The University of Tennessee and The University
+#                         of Tennessee Research Foundation.  All rights
+#                         reserved.
+# Copyright (c) 2004-2005 High Performance Computing Center Stuttgart,
+#                         University of Stuttgart.  All rights reserved.
+# Copyright (c) 2004-2005 The Regents of the University of California.
+#                         All rights reserved.
+# $COPYRIGHT$
+#
+# Additional copyrights may follow
+#
+# $HEADER$
+#
+# This is the US/English help file for Open MPI MCA error messages.
+#
+[crane-env-var-not-found]
+While trying to determine what resources are available, the CRANE
+resource allocator expects to find the following environment variables:
+
+    CRANE_NODELIST
+    CRANE_TASKS_PER_NODE
+
+However, it was unable to find the following environment variable:
+
+    %s
+
+#This is a fatal error.
+[crane-env-var-bad-value]
+While trying to determine what resources are available, the CRANE
+resource allocator uses the following environment variables:
+
+    CRANE_NODELIST       value: %s
+    CRANE_TASKS_PER_NODE value: %s
+
+However, an error was encountered when trying to parse the following variable:
+
+    %s
+
+#This is a fatal error.
+[crane-dyn-alloc-timeout]
+We attempted to obtain a dynamic allocation from Crane, but
+contact with the Crane control daemon timed out. Please check
+that the Crane dynamic allocation plug-in is properly operating.
+#
+[crane-dyn-alloc-failed]
+
+  Allocation request: %s
+#
+[dyn-alloc-no-config]
+Dynamic allocation was enabled, but no Crane configuration
+file was given. Please provide the required configuration file.
+#
+[host-not-resolved]
+The Crane control host could not be resolved.
+
+  Host: %s
+
+Please check the Crane configuration and try again.
+#
+[connection-failed]
+Connection to the Crane controller failed:
+
+  Host: %s
+  Port: %d
+
+Please check the Crane configuration and try again.
+#
+[config-file-not-found]
+The Crane configuration file was not found.
+
+  File: %s
+
+Please check the filename and path and try again.

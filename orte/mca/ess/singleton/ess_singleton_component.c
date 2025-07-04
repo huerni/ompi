@@ -149,6 +149,13 @@ static int component_query(mca_base_module_t **module, int *priority)
             *priority = 0;
             return ORTE_ERR_SILENT;
         }
+        if (NULL != getenv("CRANE_NODELIST")) {
+            /* emit a hopefully helpful error message and abort */
+            orte_show_help("help-ess-base.txt", "crane-error2", true);
+            *module = NULL;
+            *priority = 0;
+            return ORTE_ERR_SILENT;
+        }
         /* see if we are under ALPS */
         if (NULL != getenv("ALPS_APP_ID")) {
             orte_show_help("help-ess-base.txt", "alps-error2", true);

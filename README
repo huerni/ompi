@@ -154,6 +154,7 @@ General notes
   - PBS Pro, Torque
   - Platform LSF (tested with v9.1.1 and later)
   - SLURM
+  - CRANE
   - Cray XE, XC, and XK
   - Oracle Grid Engine (OGE) 6.1, 6.2 and open source Grid Engine
 
@@ -1308,6 +1309,9 @@ RUN-TIME SYSTEM SUPPORT
 
 --with-slurm
   Force the building of SLURM scheduler support.
+
+--with-crane
+  Force the building of CRANE scheduler support.
 
 --with-sge
   Specify to build support for the Oracle Grid Engine (OGE) resource
